@@ -1,24 +1,19 @@
 import './Grid.css'
 import React, { useState } from 'react';
-import { getBirthdays } from '../../apiCalls';
+import { getBirthdays, getBirthdayMonths } from '../../apiCalls';
 
-const Grid = () => {
+const Grid = (props) => {
 	const [gridState, setGridState] = useState({
-		birthdays: ['hello']
+		months: props.months,
 	});
-
-	const fetchBirthdays = getBirthdays().then(data => {
-		setGridState({birthdays: data})
-		})
-
 
 
 	return (
 		<section className='grid-container'>
-			{gridState.birthdays.map(birthday => (
+			{gridState.months.map(month => (
 				<div className='birthdayBox'>
-					<h2>{birthday.month}</h2>
-					<div>`{birthday.name}: {birthday.month}/{birthday.day} `</div>
+					<h2>{month.name}</h2>
+					<div>`{month.name}: {month.month}/{month.day} `</div>
 				</div>
 			))}
 		</section>
