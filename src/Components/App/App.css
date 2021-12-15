@@ -12,8 +12,12 @@ purple: #D077E7
   background-repeat: repeat;
   background-position: center;
   background-size: 300px;
-  height: 100vh;
+  height: 96vh;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 h1 {
@@ -23,5 +27,12 @@ h1 {
   border: 7px solid black;
   padding: 15px;
   width: 30%;
-  margin: auto;
+}
+
+.bday-form {
+  width: 80%;
+}
+
+.bday-container {
+  width: 95%;
 }
