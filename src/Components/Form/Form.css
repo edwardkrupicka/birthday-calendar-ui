@@ -1,0 +1,9 @@
+form {
+	height: 100%;
+	width: 100%;
+	border: 2px solid purple;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
